@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos.css">
+
+    <title>Consumo</title>
+</head>
+
+<body>
+    <div style="margin-top: 10px;margin-left: 25px">
+        <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large">Energia</a>
+        <a href="./agua.html" class="waves-effect waves-light blue btn-large">Agua</a>
+        <a href="./movilidad.html" class="waves-effect waves-light light-blue lighten-3 btn-large">Movilidad</a>
+        <a href="./dieta.html" class="waves-effect waves-light yellow btn-large">Alimentacion</a>
+        <a href="./residuos.html" class="waves-effect waves-light green btn-large">Residuos</a>
+        <a href="./consumo.html" class="waves-effect waves-light purple btn-large">Consumo</a>
+        <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo"
+            style="width: 150px;height: 50px;float: right;">
+
+        <form id="regForm" name="movilidad" action="#">
+            <h5 id="tipo" style="color:yellowgreen;">Consumo</h5>
+            <h3 id="subhead">Consumo</h3>
+            <!-- One "tab" for each step in the form: -->
+            <!--id 1 AÉREOS-->
+            <div class="tab" id="pregunta">¿Cuántas prendas de vestir compras para ti en un año?
+                <div class="row">
+                    <div class="col s-12">
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" checked />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">MUCHO (VARIOS CONJUNTOS Y ZAPATOS CADA MES)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">BASTANTE (ZAPATOS, PANTALONES, CAMISAS, ROPA INTERIOR, CALCETINES)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">PROMEDIO (CAMISAS, ROPA INTERIOR, CALCETINES)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI NADA (ROPA INTERIOR Y CALCETINES)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NADA</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <!--id 2 AÉREOS-->
+        <div class="tab" id="pregunta">¿Compras ropa de segunda mano?
+            <div class="row">
+                <div class="col s-12">
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" checked />
+                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SIEMPRE</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI SIEMPRE</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OCASIONALMENTE</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI NUNCA</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NUNCA</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--id TOTAL-->
+        <div class="tab" id="pregunta"> ¿Depositas el resto de residuos en un Punto Limpio?
+            <h2>TOTAL DE EMISIONES</h2>
+            <h4>200</h4>
+        </div>
+
+
+        <!--BOTON-->
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;"
+                        class="waves-effect waves-light btn-large" style="margin-top: 20px;"
+                        onclick="siguientePrev(1)">Continuar</a>
+                </div>
+            </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+
+            </div>
+        </form>
+
+</body>
+
+</html>
+<script src="../next.js"></script>

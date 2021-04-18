@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../estilos.css">
+  <title>Energia</title>
+</head>
+
+<body>
+  <div style="margin-top: 10px;margin-left: 25px">
+    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large">Energia</a>
+    <a href="./agua.html" class="waves-effect waves-light blue btn-large">Agua</a>
+    <a href="./movilidad.html" class="waves-effect waves-light light-blue lighten-3 btn-large">Movilidad</a>
+    <a href="./dieta.html" class="waves-effect waves-light yellow btn-large">Alimentacion</a>
+    <a href="./residuos.html" class="waves-effect waves-light green btn-large">Residuos</a>
+    <a href="./consumo.html" class="waves-effect waves-light purple btn-large">Consumo</a>
+    <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo"
+      style="width: 150px;height: 50px;float: right;">
+
+    <form id="regForm" action="#">
+      <h5 id="tipo" style="color: red;">ENERGIA</h5>
+      <h3 id="subhead">HOGAR</h3>
+      <!-- One "tab" for each step in the form: -->
+      <!--id 1-->
+      <div class="tab" id="pregunta">Numero de personas en su hogar:
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 2-->
+      <div class="tab" id="pregunta">Pais de residencia:
+        <p><input type="text" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 3-->
+      <div class="tab" id="pregunta">Superficie de su hogar(m2)
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 4-->
+      <div class="tab" id="pregunta">Tipo de residencia
+        <br>
+        <label>Seleccione una opcion</label>
+        <select class="browser-default" style="font-family: 'Barlow Condensed';font-size: 25px">
+          <option value="" disabled selected>Elige tu opcion</option>
+          <option value="1">Unifamiliar aislada</option>
+          <option value="2">Apareada o adosada</option>
+          <option value="3">Piso o apartamento</option>
+        </select>
+        <br>
+      </div>
+      <!--id 5-->
+      <div class="tab" id="pregunta">Consumo de electricidad (KWh/mes)
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 6-->
+      <div class="tab" id="pregunta">% de energía limpia utilizada
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 7-->
+      <div class="tab" id="pregunta">Fuente de energía para la calefacción
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Carbon</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Turba</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Gas natural</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Gasoleo de calefaccion</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Madera</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Aceite Vegetal</span>
+              </label>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Carbon vegetal</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Electricidad</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">Sin calefaccion</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 8-->
+      <div class="tab" id="pregunta">Calificación energética de la vivienda
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">A</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">B</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">C</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">D</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">E</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">F</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">G</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">No lo se,calcularlo de forma manual</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 9-->
+      <div class="tab" id="pregunta">- Compañía eléctrica contratada
+        <p><input type="text" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 10-->
+      <div class="tab" id="pregunta">Importe medio mensual de la factura de luz (en €)
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 11-->
+      <div class="tab" id="pregunta">¿Que tipo de Aire Acondicionado tienes?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CENTRALIZADO POR CONDUCTOS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> SPLITS EN CADA HABITACIÓN</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO TENGO AIRE
+              ACONDICIONADO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
+          </label>
+        </p>
+
+      </div>
+      <!--id 12-->
+      <div class="tab" id="pregunta">Temperatura de casa en verano cunado se utiliza en AC
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">18ºC O MENOS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 20ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">22ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">24ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">26ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">28ºC O MÁS</span>
+          </label>
+        </p>
+      </div>
+      <!--id 13-->
+      <div class="tab" id="pregunta">¿Qué electrodomésticos tienes en tu vivienda?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVAVAJILLAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SECADORA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVADORA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">FRIGORIFICO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CONGELADOR</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
+          </label>
+        </p>
+      </div>
+      <!--id 14-->
+      <div class="tab" id="pregunta">¿Qué otros aparatos eléctricos tienes en tu vivienda?
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">TV</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PC</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CONSOLA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">IMPRESORA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALEFACTOR</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SISTEMA DE MUSICA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">OTRO</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 15-->
+      <div class="tab" id="pregunta">Cantidad de LEDs en tu vivienda
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> TODAS LAS LUCES</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> CASI TODAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">BASTANTES</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ALGUNAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NINGUNA</span>
+          </label>
+        </p>
+      </div>
+      <!--id 16-->
+      <div class="tab" id="pregunta">¿Sueles utilizar varios electrodomésticos a la vez?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">POCO, UTILIZO POCO LOS
+              ELECTRODOMÉSTICOS Y LOS INTENTO ENCENDER A DIFERENTES HORAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> MEDIO, UTILIZO DE MODO NORMAL
+              LOS ELECTRODOMÉSTICOS, NO TENGO EN CUENTA LAS HORAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">MUCHO, UTILIZO DE MODO INTENSIVO
+              LOS ELECTRODOMÉSTICOS Y LOS SUELO ENCENDER AL MISMO TIEMPO</span>
+          </label>
+        </p>
+      </div>
+      <!--id 17-->
+      <div class="tab" id="pregunta">Apagas todos los equipos electrónicos y regletas cuando no los usas?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">-SI, LOS DESENCHUFO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, LOS DEJO EN STANDBY</span>
+          </label>
+        </p>
+      </div>
+      <!--id 18-->
+      <div class="tab" id="pregunta">¿Qué compañía de gas tienes contratada en tu vivienda?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ENDESA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NATURGY</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">IBERDROLA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">EDP</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO TENGO</span>
+          </label>
+        </p>
+      </div>
+      <!--id 19-->
+      <div class="tab" id="pregunta">Fuente de energía para calentar la vivienda (se puede elegir más de uno)
+        <div class="row">
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">ELECTRICIDAD</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;"> GAS NATURAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS BUTANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS PROPANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GASOLEO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN MINERAL</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">LEÑA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN VEGETAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PELLETS</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SERRIN</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GEOTERMIA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">AEROTERMINA</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">HIDROTERMINA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SOLAR</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">TERMICA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">OTRO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NO UTILIZO CALEFACCIÓN</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 20-->
+      <div class="tab" id="pregunta">¿Qué tipo de instalación utilizas para distribuir el calor?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> SUELO O TECHO RADIANTE</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">RADIADORES</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ESTUFA</span>
+          </label>
+        </p>
+      </div>
+      <!--id 21-->
+      <div class="tab" id="pregunta">Cuando utilizas la calefacción ¿A qué temperatura mantienes tu casa en invierno?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">18ºC O MENOS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">20ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 22ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 24ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 26ºC</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 28ºC O MAS</span>
+          </label>
+        </p>
+      </div>
+      <!--id 25-->
+      <div class="tab" id="pregunta">Para calentar el agua ¿Qué fuente de energía utilizas?(una o varias opciones a elegir)        
+        <div class="row">
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">ELECTRICIDAD</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;"> GAS NATURAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS BUTANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS PROPANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GASOLEO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN MINERAL</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">LEÑA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN VEGETAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PELLETS</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SERRIN</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GEOTERMIA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">AEROTERMINA</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">HIDROTERMINA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SOLAR</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">TERMICA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">OTRO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NO UTILIZO CALEFACCIÓN</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 26-->
+      <div class="tab" id="pregunta">¿Qué tipo de caldera tienes?
+        <div class="row">
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA ELECTRICA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA DE BIOMASA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA DE GASOLEO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA ATMOSFÉRICA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA ESTANCA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CALDERA DE CONDENSACIÓN</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NO LO SE</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 27-->
+      <div class="tab" id="pregunta">Y para cocinar, ¿qué fuente de energía utilizas? (una o varias opciones a elegir)        
+        <div class="row">
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">ELECTRICIDAD</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;"> GAS NATURAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS BUTANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GAS PROPANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">GASOLEO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN MINERAL</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">LEÑA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">CARBÓN VEGETAL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PELLETS</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">SERRIN</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PELLETS</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">OTROS</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NO UTILIZO PLACA DE COCINA</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 28-->
+      <div class="tab" id="pregunta">Y para cocinar, ¿qué fuente de energía utilizas? (una o varias opciones a elegir)        
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">PLACA DE GAS</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">MIXTA(ELECTRICIDAD Y GAS)</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NO LO SE</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 29-->
+      <div class="tab" id="pregunta">¿Qué otros aparatos eléctricos tienes en tu vivienda?
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">ORDENADOR DE MESA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">ORDENADOR PORTATIL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">TABLET</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">MOVIL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">IMPRESORA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">NINGUNO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span style="font-size: 30px;">OTRO</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--id 30-->
+      <div class="tab" id="pregunta">
+        <h2>TOTAL EMISIONES</h2>
+        <h4>Resultado anual : 10.5</h4>
+        <h1>CONSEJOS</h1>
+      </div>
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;"
+            class="waves-effect waves-light btn-large" style="margin-top: 20px;"
+            onclick="siguientePrev(1)">Continuar</a>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+
+</body>
+
+</html>
+
+
+<!-- ESTILOS Y SCRIPTS-->
+<script src="../next.js"></script>

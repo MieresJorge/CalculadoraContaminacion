@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>Agua</title>
+</head>
+<body>
+  <div style="margin-top: 10px;margin-left: 25px">
+    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large">Energia</a>
+    <a href="./agua.html" class="waves-effect waves-light blue btn-large">Agua</a>
+    <a href="./movilidad.html" class="waves-effect waves-light light-blue lighten-3 btn-large">Movilidad</a>
+    <a href="./alimentacion.html" class="waves-effect waves-light yellow btn-large">Alimentacion</a>
+    <a href="./residuos.html" class="waves-effect waves-light green btn-large">Residuos</a>
+    <a href="./consumo.html" class="waves-effect waves-light purple btn-large">Consumo</a>
+    <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo" style="width: 150px;height: 50px;float: right;">
+
+    <form id="regForm" action="#" name="water">
+    <h5 id="tipo" style="color: #237cf1;">AGUA</h5>
+    <h3 id="subhead">CONSUMO</h3>
+    <p><input type="number" placeholder="Resultado Total" oninput="this.className = ''" name="resultado" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+
+  <!-- One "tab" for each step in the form: -->
+  <!--id 1-->
+  <div class="tab" id="pregunta">¿Cuál es el importe medio mensual de tu factura de agua?
+    <p><input onkeyup="calcularagua()" type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="aguaMensual" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+    
+  </div>
+    <!--id 2-->
+    <div class="tab" id="pregunta">¿Tienes instalado algún sistema ahorrador en el inodoro?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SÍ, MIS INODOROS SON DE BAJO CONSUMO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> NO, MIS INODOROS SON CONVENCIONALES</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO LO SE</span>
+          </label>
+        </p>
+    
+      </div>
+    <!--id 3-->
+    <div class="tab" id="pregunta">3.- ¿Cuántos minutos tardas en ducharte?
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+    </div>
+    <!--id 4-->
+    <div class="tab" id="pregunta">¿Cuánto tiempo tarda en llegar el agua caliente a la ducha?
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+    </div>
+    <!--id 5-->
+    <div class="tab" id="pregunta">¿Tienes instalado algún dispositivo limitador de caudal en la ducha?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SÍ, TENGO INSTALADO UN REDUCTOR DE CAUDAL</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, TENGO UN GRIFO DE DUCHA CONVENCIONAL</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO LO SÉ</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
+          </label>
+        </p>
+    </div>
+    <!--id 6-->
+    <div class="tab" id="pregunta">¿Tienes instalado algún dispositivo limitador de caudal en la ducha?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SI, ALGUNA VEZ ME BAÑO</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, NUNCA/ NO TENGO BAÑERA</span>
+          </label>
+        </p>
+    </div>
+    <!--id 7-->
+    <div class="tab" id="pregunta">¿Cómo utilizas el grifo del lavabo?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ABRO EL GRIFO, PERO NO LO SUELO CERRAR HASTA TERMINAR</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ABRO EL GRIFO, PERO LO VOY CERRANSDO SIEMPRE QUE PUEDO</span>
+          </label>
+        </p>
+    </div>
+    <!--id 8-->
+    <div class="tab" id="pregunta">¿Tienes instalado algún dispositivo limitador de caudal en los grifos?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SÍ, TENGO INSTALADO UN REDUCTOR DE CAUDAL</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, TENGO UN GRIFO CONVENCIONAL</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO LO SÉ</span>
+            </label>
+          </p>
+    </div>
+    <!--id 9-->
+    <div class="tab" id="pregunta"> ¿Cómo sueles lavar tu vajilla?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVAVAJILLAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">A MANO</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO LAVO, COMO FUERA DE CASA O UTILIZO DESECHABRES</span>
+            </label>
+          </p>
+    </div>
+    <!--id 10-->
+    <div class="tab" id="pregunta"> ¿Cómo sueles beber agua en tu hogar?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">DE UN SISTEMA DE OSMOSIS INVERSA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">DEL GRIFO FILTRADA</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">AGUA EMBOTELLADA</span>
+            </label>
+          </p>
+    </div>
+  <!--id 11-->
+  <div class="tab" id="pregunta"> ¿Cómo sueles beber agua en tu hogar?
+    <p>
+      <label>
+        <input name="group1" type="radio" checked />
+        <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">DE UN SISTEMA DE OSMOSIS INVERSA</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="group1" type="radio" />
+        <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">DEL GRIFO FILTRADA</span>
+      </label>
+    </p>
+    <p>
+        <label>
+          <input name="group1" type="radio" />
+          <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">AGUA EMBOTELLADA</span>
+        </label>
+      </p>
+</div>
+    <!--id 12-->
+    <div class="tab" id="pregunta"> ¿Cómo sueles lavar tu ropa?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVADORA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">A MANO</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVANDERÍA U OTRO</span>
+            </label>
+          </p>
+    </div>
+    <!--id 13-->
+    <div class="tab" id="pregunta">¿Tienes piscina en tu vivienda?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SÍ, TENGO UNA PISCINA</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, NO TENGO PISCINA ACTUALMENTE</span>
+          </label>
+        </p>
+    </div>
+    <!--id 14-->
+    <div class="tab" id="pregunta">¿Tienes piscina en tu vivienda?
+        <p>
+          <label>
+            <input name="group1" type="radio" checked />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVADOS A MANO CON MANGUERAS, CUBOS O HIDROLIMPIADORAS</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">EN UN AUTOLAVADO CON AUTOSERVICIO</span>
+          </label>
+        </p>
+        <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">EN UN TÚNEL DE LAVADO</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO TENGO COCHE O NO LO SUELO LAVAR</span>
+            </label>
+          </p>
+    </div>
+    <!--id 15 -->
+    <div class="tab" id="pregunta">¿Cuántas veces al año lavas tu vehículo
+        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--RESULTADO-->
+      <div class="tab" id="pregunta">¿Cuántas veces al año lavas tu vehículo
+            <p><button>RESULTADOS</button></p>
+      </div>
+  <!--BOTON-->
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;" class="waves-effect waves-light btn-large" style="margin-top: 20px;" onclick="siguientePrev(1)">Continuar</a>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+
+  </div>
+</form>
+
+</body>
+</html>
+
+
+<!-- ESTILOS Y SCRIPTS-->
+<script src="../next.js"></script>
