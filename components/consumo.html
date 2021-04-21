@@ -17,19 +17,24 @@
 
 <body>
     <div style="margin-top: 10px;margin-left: 25px">
-        <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large">Energia</a>
-        <a href="./agua.html" class="waves-effect waves-light blue btn-large">Agua</a>
-        <a href="./movilidad.html" class="waves-effect waves-light light-blue lighten-3 btn-large">Movilidad</a>
-        <a href="./dieta.html" class="waves-effect waves-light yellow btn-large">Alimentacion</a>
-        <a href="./residuos.html" class="waves-effect waves-light green btn-large">Residuos</a>
-        <a href="./consumo.html" class="waves-effect waves-light purple btn-large">Consumo</a>
-        <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo"
-            style="width: 150px;height: 50px;float: right;">
+        <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo" style="width: 150px;height: 50px;float: right;">
+        <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large" id="estados">Energia</a>
+        <a href="./agua.html" class="waves-effect waves-light blue btn-large" id="estados" disabled>Agua</a>
+        <a href="./movilidad.html" class="waves-effect waves-light red lighten-1 lighten-3 btn-large" id="estados">Movilidad</a>
+        <a href="./dieta.html" class="waves-effect waves-light yellow btn-large" id="estados">Alimentacion</a>
+        <a href="./residuos.html" class="waves-effect waves-light green btn-large" id="estados">Residuos</a>
+        <a href="./consumo.html" class="waves-effect waves-light purple btn-large" id="estados" >Consumo</a>
 
-        <form id="regForm" name="movilidad" action="#">
+
+        <form id="regForm" name="consumo" action="#">
             <h5 id="tipo" style="color:yellowgreen;">Consumo</h5>
             <h3 id="subhead">Consumo</h3>
             <!-- One "tab" for each step in the form: -->
+            <!--id 0 -->
+            <div class="tab" id="pregunta" onkeyup="consumoTotal()">€ Gastados en ropa mensualmente
+                <p><input name="gastoRopa" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''"
+                        name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+            </div>
             <!--id 1 AÉREOS-->
             <div class="tab" id="pregunta">¿Cuántas prendas de vestir compras para ti en un año?
                 <div class="row">
@@ -37,25 +42,29 @@
                         <p>
                             <label>
                                 <input name="group1" type="radio" checked />
-                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">MUCHO (VARIOS CONJUNTOS Y ZAPATOS CADA MES)</span>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">MUCHO (VARIOS
+                                    CONJUNTOS Y ZAPATOS CADA MES)</span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input name="group1" type="radio" />
-                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">BASTANTE (ZAPATOS, PANTALONES, CAMISAS, ROPA INTERIOR, CALCETINES)</span>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">BASTANTE
+                                    (ZAPATOS, PANTALONES, CAMISAS, ROPA INTERIOR, CALCETINES)</span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input name="group1" type="radio" />
-                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">PROMEDIO (CAMISAS, ROPA INTERIOR, CALCETINES)</span>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">PROMEDIO
+                                    (CAMISAS, ROPA INTERIOR, CALCETINES)</span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input name="group1" type="radio" />
-                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI NADA (ROPA INTERIOR Y CALCETINES)</span>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI NADA
+                                    (ROPA INTERIOR Y CALCETINES)</span>
                             </label>
                         </p>
                         <p>
@@ -67,60 +76,155 @@
                     </div>
                 </div>
             </div>
-        <!--id 2 AÉREOS-->
-        <div class="tab" id="pregunta">¿Compras ropa de segunda mano?
-            <div class="row">
-                <div class="col s-12">
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" checked />
-                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SIEMPRE</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI SIEMPRE</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OCASIONALMENTE</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI NUNCA</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input name="group1" type="radio" />
-                            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NUNCA</span>
-                        </label>
-                    </p>
+            <!--id 2 AÉREOS-->
+            <div class="tab" id="pregunta">¿Compras ropa de segunda mano?
+                <div class="row">
+                    <div class="col s-12">
+                        <p>
+                            <label>
+                                <input name="ropasegundamano" type="radio"  onclick="consumoTotal()"/>
+                                <span
+                                    style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SIEMPRE</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="ropasegundamano" type="radio" onclick="consumoTotal()"/>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI
+                                    SIEMPRE</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="ropasegundamano" type="radio" onclick="consumoTotal()"/>
+                                <span
+                                    style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OCASIONALMENTE</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="ropasegundamano" type="radio" onclick="consumoTotal()"/>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CASI
+                                    NUNCA</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="ropasegundamano" type="radio" onclick="consumoTotal()"/>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NUNCA</span>
+                            </label>
+                        </p>
+                    </div>
                 </div>
             </div>
+            <!--id 3 TABACO-->
+            <div class="tab" id="pregunta" onkeyup="consumoTotal()"> € Gastados en tabaco mensualmente(si no consume dejar vacio)
+                <p><input name="consumoTabaco" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+            </div>
+            <!--id 4 BOLSAS-->
+            <div class="tab" id="pregunta">¿Que tipo de bolsa utilizas para hacer la compra?
+                <div class="row">
+                    <div class="col s-12">
+                        <p>
+                            <label>
+                                <input name="grupobolsas" type="radio" onclick="consumoTotal()"/>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">PLASTICO</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="grupobolsas" type="radio" onclick="consumoTotal()"/>
+                                <span
+                                    style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">PAPEL</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="grupobolsas" type="radio" onclick="consumoTotal()"/>
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ALGODÓN</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--id 5 BOLSAS-->
+            <div class="tab" id="pregunta" onkeyup="consumoTotal()">¿Cuantas bolsas de este tipo compras al año?
+                <p><input name="bolsas" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+            </div>
+            <!--id 6 BEBIDAS EMBOTELLADAS-->
+            <div class="tab" id="pregunta" onkeyup="consumoTotal()">¿Cuantas bebidas embotelladas sueles comprar al mes?
+                <p><input name="botellitas" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+            </div>
+            <!--id 7 LIBROS-->
+            <div class="tab" id="pregunta">¿Sueles Leer libros en papel, formato digital o ambos?
+                <div class="row">
+                    <div class="col s-12">
+                        <p>
+                            <label>
+                                <input name="group1" type="radio"  />
+                                <span
+                                    style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LIBROS EN PAPEL</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">FORMATO DIGITAL</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span
+                                    style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">AMBOS</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--id 8 LIBROS-->
+            <div class="tab" id="pregunta" onkeyup="consumoTotal()">¿Cuantos libros (papel) compras al mes
+                <p><input name="libritos" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+            </div>            
+            <!--TOTAL-->
+            <div class="tab" id="pregunta">
+                <div class="row">
+                    <div class="col s12 m5">
+                      <div class="card-panel teal">
+                        <span class="white-text">
+                          <p>RESULTADO ANUAL (kg/CO2)</p>
+                          <p id="totalRopaa"></p>
+                          <p id="totalTabacoo"></p>
+                          <p id="totalBolsaas"></p>
+                          <p id="totalBebidas"></p>
+                          <p id="totalLibros"></p>
+                          <p id="totalTotal"></p>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col s12 m12 red animate__animated animate__heartBeat">
+                      <div class="card-panel teal red">
+                        <span class="white-text">
+                        <p style="text-align: center;font-size: 45px;">CONSEJOS</p>
+                          <p id="consejoComidaEcologica"></p>
+                          <p id="consejoCompraEcologica"></p>
+                        </span>
+                      </div>
+                    </div>
+            </div>
         </div>
-        <!--id TOTAL-->
-        <div class="tab" id="pregunta"> ¿Depositas el resto de residuos en un Punto Limpio?
-            <h2>TOTAL DE EMISIONES</h2>
-            <h4>200</h4>
-        </div>
-
-
-        <!--BOTON-->
+            <!--BOTON-->
             <div style="overflow:auto;">
                 <div style="float:right;">
                     <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;"
                         class="waves-effect waves-light btn-large" style="margin-top: 20px;"
-                        onclick="siguientePrev(1)">Continuar</a>
+                        onclick="siguientePrev(1),consumoTotal()">Continuar</a>
                 </div>
             </div>
             <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <div style="margin-top: 10px;margin-left: 25px">
-    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large">Energia</a>
-    <a href="./agua.html" class="waves-effect waves-light blue btn-large">Agua</a>
-    <a href="./movilidad.html" class="waves-effect waves-light light-blue lighten-3 btn-large">Movilidad</a>
-    <a href="./alimentacion.html" class="waves-effect waves-light yellow btn-large">Alimentacion</a>
-    <a href="./residuos.html" class="waves-effect waves-light green btn-large">Residuos</a>
-    <a href="./consumo.html" class="waves-effect waves-light purple btn-large">Consumo</a>
+    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large" id="estados" >Energia</a>
+    <a href="./agua.html" class="waves-effect waves-light blue btn-large" id="estados" >Agua</a>
+    <a href="./movilidad.html" class="waves-effect waves-light red lighten-1 lighten-3 btn-large" id="estados">Movilidad</a>
+    <a href="./dieta.html" class="waves-effect waves-light yellow btn-large" id="estados" >Alimentacion</a>
+    <a href="./residuos.html" class="waves-effect waves-light green btn-large" id="estados" >Residuos</a>
+    <a href="./consumo.html" class="waves-effect waves-light purple btn-large" id="estados" >Consumo</a>
     <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo" style="width: 150px;height: 50px;float: right;">
 
     <form id="regForm" action="#" name="water">
@@ -30,7 +30,7 @@
   <!-- One "tab" for each step in the form: -->
   <!--id 1-->
   <div class="tab" id="pregunta">¿Cuál es el importe medio mensual de tu factura de agua?
-    <p><input onkeyup="calcularagua()" type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="aguaMensual" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+    <p><input onkeyup="calcularagua()" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="aguaMensual" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
     
   </div>
     <!--id 2-->
@@ -57,11 +57,11 @@
       </div>
     <!--id 3-->
     <div class="tab" id="pregunta">3.- ¿Cuántos minutos tardas en ducharte?
-        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+        <p><input type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
     </div>
     <!--id 4-->
     <div class="tab" id="pregunta">¿Cuánto tiempo tarda en llegar el agua caliente a la ducha?
-        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+        <p><input type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
     </div>
     <!--id 5-->
     <div class="tab" id="pregunta">¿Tienes instalado algún dispositivo limitador de caudal en la ducha?
@@ -269,7 +269,7 @@
     </div>
     <!--id 15 -->
     <div class="tab" id="pregunta">¿Cuántas veces al año lavas tu vehículo
-        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+        <p><input type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
       <!--RESULTADO-->
       <div class="tab" id="pregunta">¿Cuántas veces al año lavas tu vehículo

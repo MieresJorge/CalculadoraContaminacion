@@ -37,6 +37,8 @@ function siguientePrev(n) {
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
+
+
 }
 
 function validateForm() {
@@ -108,10 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (formulario["kmrecorridos"].value >= 3000)
     {
-      formulario["resultado"].value = valormovilidad * 0.095;
+      formulario["resultado"].value.toFixed(2)= valormovilidad * 0.095;
       if(type[1].checked)
       {
-        formulario["resultado"].value = valormovilidad * 0.095 * 2;
+        formulario["resultado"].value.toFixed(2) = valormovilidad * 0.095 * 2;
       }
     }
 
@@ -123,60 +125,291 @@ document.addEventListener('DOMContentLoaded', function() {
     formulario = document.forms["movilidad"];
     var valormovilidad2 = Number(formulario["terrestrerecorrido"].value);
     var type2 = document.getElementsByName("comeback2");
+    var typefuell = document.getElementsByName("comeback4");
+    var terrestre;
     if (type2[0].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 2.34 * 0.05;
+      terrestre = valormovilidad2 * 2.34 * 0.05;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Se recomienda usar un transporte mas ecologico como tren,autobus o vehiculo a gas/electrico"
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 2.34 * 0.05 * 2;
+        terrestre = valormovilidad2 * 2.34 * 0.05 * 2;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
       }
     }  
     if (type2[1].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 2.70 * 0.05;
+      terrestre = valormovilidad2 * 2.70 * 0.05;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2)
+      document.getElementById("consejostransporte").innerHTML = "Se recomienda usar un transporte mas ecologico como tren,autobus o vehiculo a gas/electrico";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2* 2.70 * 0.05 * 2;
+        document.getElementById("resultadoterrestre").innerHTML = valormovilidad2 * 2.70 * 0.05 * 2;
       }
     }  
     if (type2[2].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 0.2346 * 0.34;
+      terrestre = valormovilidad2 * 0.2346 * 0.34;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Si usa Furgoneta se recomienda viaje compartido para contaminar menos";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 0.2346 * 0.34 * 2;
+        terrestre = valormovilidad2 * 0.2346 * 0.34 * 2;;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
       }
     }
     if (type2[3].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 2.539 * 0.0112;
+      terrestre = valormovilidad2 * 2.539 * 0.0112;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Sigue usando el autobus :)";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 2.539 * 0.0112 * 2;
+        terrestre = valormovilidad2 * 2.539 * 0.0112 * 2;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
       }
     } 
     if (type2[4].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 0.024 * 0.023;
+      terrestre = valormovilidad2 * 0.024 * 0.023;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Sigue usando el tren :)";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 0.024 * 0.023 * 2;
+        terrestre = valormovilidad2 * 0.024 * 0.023 * 2;;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
       } 
     } 
     if (type2[5].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 0.024 * 0.023;
+      terrestre = valormovilidad2 * 0.024 * 0.023;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Sigue usando el tren :)";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 0.024 * 0.023 * 2;
+        terrestre = valormovilidad2 * 0.024 * 0.023 * 2;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2); 
       } 
     } 
     if (type2[6].checked)
     {
-      formulario["resultadoterrestre"].value = valormovilidad2 * 2.34 * 0.05;
+      terrestre = valormovilidad2 * 2.34 * 0.05;
+      document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
+      document.getElementById("consejostransporte").innerHTML = "Si su vehiculo utiliza combustibles como gasolina o diesel se recomienda usar el transporte publico o un combustible mas amigable con el ambiente como el gas :)";
       if(type2[1].checked)
       {
-        formulario["resultadoterrestre"].value = valormovilidad2 * 2.34 * 0.05 * 2;
+        terrestre = valormovilidad2 * 2.34 * 0.05 * 2;
+        document.getElementById("resultadoterrestre").innerHTML = terrestre.toFixed(2);
       } 
-    } 
+    }
+    //funcion para consejos con tipo de combustible
+    if (typefuell[0].checked)
+    {
+      document.getElementById("consejosTipoTransporte").innerHTML = "Usar otra alternativa de combustible mas ecologica como Gas o Electrica";
+    }
+    if (typefuell[1].checked)
+    {
+      document.getElementById("consejosTipoTransporte").innerHTML = "Usar otra alternativa de combustible mas ecologica como Gas o Electrica";
+    }
+    if (typefuell[2].checked)
+    {
+      document.getElementById("consejosTipoTransporte").innerHTML = "";
+    }
+    if (typefuell[4].checked)
+    {
+      document.getElementById("consejosTipoTransporte").innerHTML = "";
+    }
   }
+
+  function cambiar(){
+    formularioo = document.forms["movilidad"];
+    formularioo["perro"].style = "display: block;animation:zoomIn; animation-duration: 2s;";
+
+  }
+
+  function cambiartotal(){
+    formularioo = document.forms["movilidad"];
+      formularioo["perros"].style = "display: block;animation:zoomIn; animation-duration: 2s;";
+    if (formulario["perro"].style = "display: block;animation:zoomIn; animation-duration: 2s;")
+    {
+      formulario["perro"].style = "display: none"
+    }
+  }
+
+  document.getElementsByName("perra").value = "AEREO"
+
+
+  //FUNCION PARA CALCULAR ALIMENTACION Y CONSEJOS PERRI//
+  
+  function calcularalimenacion(){
+    formulario = document.forms["alimentacioon"];
+    var compraecologica = document.getElementsByName("group3");
+    var tipoAlimentacion = document.getElementsByName("group01");
+    var morfi; 
+    if(tipoAlimentacion[0].checked)
+    {
+      document.getElementById("resultadoAlimentacion").innerHTML = "196.85";
+    }
+    if(tipoAlimentacion[1].checked)
+    {
+      document.getElementById("resultadoAlimentacion").innerHTML = "171.79";
+    }
+    if(tipoAlimentacion[2].checked)
+    {
+      document.getElementById("resultadoAlimentacion").innerHTML = "303.01";
+    }
+    if(tipoAlimentacion[3].checked)
+    {
+      document.getElementById("resultadoAlimentacion").innerHTML = "392.07";
+    }
+    if(tipoAlimentacion[4].checked)
+    {
+      document.getElementById("resultadoAlimentacion").innerHTML = "303.01";
+    }
+
+    /* CONSEJOS POR SI COMPRA COMIDA LOCALMENTE -320KM PA*/
+    if(compraecologica[0].checked)
+    {
+      document.getElementById("consejoCompraEcologica").innerHTML = "";
+    }
+    if(compraecologica[1].checked)
+    {
+      document.getElementById("consejoCompraEcologica").innerHTML = "Mientras mas comida producida localmente consumas menos huella produces";
+    }
+    if(compraecologica[2].checked)
+    {
+      document.getElementById("consejoCompraEcologica").innerHTML = "Se recomienda buscar lugares donde se produzca comida localmente";
+    }
+  }
+
+  function consejoComidaEcologica(){
+    formulario = document.forms["alimentacioon"];
+    var comidaEcologica = document.getElementsByName("group2");
+    if(comidaEcologica[0].checked)
+    {
+      document.getElementById("consejoComidaEcologica").innerHTML = ""
+    }
+    if(comidaEcologica[1].checked)
+    {
+      document.getElementById("consejoComidaEcologica").innerHTML = ""
+    }
+    if(comidaEcologica[2].checked)
+    {
+      document.getElementById("consejoComidaEcologica").innerHTML = "Se recomienda comprar mas comida ecologica"
+    }
+  }
+
+  /* CALCULO PARA RESIDUOS */
+function calculoresiduos(){
+  formulario = document.forms["residuos"];
+  var reciclaje = document.getElementsByName("reciclaje01");
+  var reciclajeVerde = document.getElementsByName("reciclaje02");
+  var reciclajeMarron = document.getElementsByName("reciclaje03");
+  var reciclajeResiduos = document.getElementsByName("reciclaje04");
+  var ConsejosRopa = document.getElementsByName("consejos01");
+  var cantidadkg = 450;
+
+  if (reciclaje[0].checked || reciclaje[1].checked)
+  {
+    cantidadkg = cantidadkg - 91.35;
+    var emisiones = cantidadkg * 0.177;
+    var total = emisiones + 1.46;
+    document.getElementById("resultadoResiduo").innerHTML = total;
+      if(reciclajeVerde[0].checked || reciclajeVerde[1].checked)
+      {
+        cantidadkg = cantidadkg - 0.45;
+        emisiones = cantidadkg * 0.177;
+        total =emisiones + 0.0036;
+        document.getElementById("resultadoResiduo").innerHTML = total.toFixed(2);
+      }
+      if(reciclajeMarron [0].checked || reciclajeMarron[1].checked)
+      {
+        cantidadkg = cantidadkg - 91.35;
+        emisiones = cantidadkg * 0.177;
+        total =emisiones + 0.24;
+        document.getElementById("resultadoResiduo").innerHTML = total.toFixed(2);
+      }
+      if(reciclajeResiduos [0].checked || reciclajeResiduos[1].checked)
+      {
+        cantidadkg = cantidadkg - 193.5;
+        emisiones = cantidadkg * 0.177;
+        total =emisiones + 0.89;
+        document.getElementById("resultadoResiduo").innerHTML = total.toFixed(2);
+      }
+
+      /*CONSEJOS PADRE */
+      if(ConsejosRopa[4].checked || ConsejosRopa[3].checked )
+      {
+        document.getElementById("ConsejosRopa").innerHTML = "Te recomendamos donar la ropa que ya no usas";
+      }
+  }
+}
+
+    /* FUNCION PARA CALCULAR CONSUMO */
+    function consumoTotal(){
+      formulario = document.forms["consumo"];
+      var totalRopa = Number(formulario["gastoRopa"].value);
+      var totalTabaco = Number(formulario["consumoTabaco"].value);
+      var totalBolsas = Number(formulario["bolsas"].value);
+      var totalbotellas = Number(formulario["botellitas"].value);
+      var totalLibros = Number(formulario["libritos"].value);
+      var tipobolsass = document.getElementsByName("grupobolsas");
+      var tabaco;
+      var bolsass;
+      var botellas;
+      var ropita;
+      var ropaSegundaMano = document.getElementsByName("ropasegundamano");
+      if (ropaSegundaMano[1].checked)
+      {
+        ropita = totalRopa * 0.31 * 0.25;
+        document.getElementById("totalRopaa").innerHTML ="Total por ropa: " + ropita.toFixed(2);
+      }
+      if (ropaSegundaMano[2].checked)
+      {
+        ropita = totalRopa * 0.31 * 0.5;
+        document.getElementById("totalRopaa").innerHTML = "Total por ropa: " + ropita.toFixed(2);
+      }
+      if (ropaSegundaMano[3].checked)
+      {
+        ropita = totalRopa * 0.31 * 0.9;
+        document.getElementById("totalRopaa").innerHTML ="Total por ropa: " + ropita.toFixed(2);
+      }
+      if (ropaSegundaMano[4].checked)
+      {
+        ropita = totalRopa * 0.31;
+        document.getElementById("totalRopaa").innerHTML = "Total por ropa: " + ropita.toFixed(2);
+      }
+
+      //CALCULO DE CONSUMO DE TABACO
+      tabaco = totalTabaco * 1.131;
+      document.getElementById("totalTabacoo").innerHTML = "Total emision por tabaco: " + tabaco.toFixed(2);
+      //CALCULO DE CONSUMO POR BOLSAS :d
+      if(tipobolsass[0].checked)
+      {
+        bolsass = totalBolsas * 0.1183
+        document.getElementById("totalBolsaas").innerHTML ="Total emision por Bolsas: " +  bolsass.toFixed(2);
+      }
+      if(tipobolsass[1].checked)
+      {
+        bolsass = totalBolsas * 0.02
+        document.getElementById("totalBolsaas").innerHTML ="Total emision por Bolsas: " +  bolsass.toFixed(2);
+      }
+      if(tipobolsass[2].checked)
+      {
+        bolsass = totalBolsas * 3.98
+        document.getElementById("totalBolsaas").innerHTML ="Total emision por Bolsas: " +  bolsass.toFixed(2);
+      }
+
+      //CALCULO POR BOTELLAS PERRI
+      botellas = totalbotellas * 0.447;
+      document.getElementById("totalBebidas").innerHTML ="Total emision por botellas: " + botellas.toFixed(2);
+
+      //Calculo PARA LIBROS :D
+      var libross;
+      libross = totalLibros * 1.2;
+      document.getElementById("totalLibros").innerHTML ="Total emision por Libros: " + libross.toFixed(2);
+      //TOTAL DEL TOTAL 
+     
+    }
+  
