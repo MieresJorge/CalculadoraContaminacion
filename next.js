@@ -413,3 +413,165 @@ function calculoresiduos(){
      
     }
   
+    //FUNCION PARA CALCULAR CANTIDAD DE ENERGIA
+    function calcularEnergia(){
+      formulario = document.forms["energia"];
+      var totalElectricidadMes = Number(formulario["consumoElectricidad"].value);
+      var totalEnergiaLimpia = Number(formulario["electricidadLimpia"].value);
+      var tipoCalefaccion = document.getElementsByName("tipoCalefacion");
+      var emisionEnergia;
+      if(tipoCalefaccion[0].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 1.91 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100)
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[1].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 1.91 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100)
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[2].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 0.182 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100)
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[3].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 2.86 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100);
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[4].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 3.127 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100);
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[5].checked)
+      {
+        emisionEnergia = totalElectricidadMes * 0.31;
+        var total = totalElectricidadMes * 1.91 + totalElectricidadMes;
+        var total2 = total - (total*totalEnergiaLimpia/100);
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      if(tipoCalefaccion[6].checked)
+      {
+        total = totalElectricidadMes * 0.31;
+        var total2 = total - (total*totalEnergiaLimpia/100)
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2) ;
+      }
+      if(tipoCalefaccion[7].checked)
+      {
+        total = totalElectricidadMes * 0.31;
+        var total2 = total- (total*totalEnergiaLimpia/100)
+        document.getElementById("resultadoElectro").innerHTML = total2.toFixed(2);
+      }
+      //CONSEJO AIRE ACONDICIONADO 
+      var aireAcondicionado = document.getElementsByName("grupoAire");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejoAire").innerHTML = "Se recomienda usar split"
+      }
+      //OTRO CONSEJOS AIRE ACONDICIONADO
+      var aireAcondicionado = document.getElementsByName("grupoTemperaturaAire");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejoAire2").innerHTML = "Se recomienda usar el aire acondicionado en 24° de dia 24° o 21° de noche"
+      }
+      if(aireAcondicionado[1].checked)
+      {
+        document.getElementById("consejoAire2").innerHTML = "Se recomienda usar el aire acondicionado en 24° de dia 24° o 21° de noche"
+      }
+      if(aireAcondicionado[2].checked)
+      {
+        document.getElementById("consejoAire2").innerHTML = "Se recomienda usar el aire acondicionado en 24° de dia 24° o 21° de noche"
+      }
+      //CONSEJOS POR APARATOS ELECTRICOS
+      var aireAcondicionado = document.getElementsByName("consejosAparatos");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda usar split"
+      }
+      var aireAcondicionado = document.getElementsByName("consejosAparatos");
+      if(aireAcondicionado[1].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      var aireAcondicionado = document.getElementsByName("consejosAparatos");
+      if(aireAcondicionado[2].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      var aireAcondicionado = document.getElementsByName("consejosAparatos");
+      if(aireAcondicionado[3].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      var aireAcondicionado = document.getElementsByName("consejosAparatos");
+      if(aireAcondicionado[4].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      if(aireAcondicionado[5].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      if(aireAcondicionado[6].checked)
+      {
+        document.getElementById("consejosAparatos").innerHTML = "Se recomienda desconectar aparatos electricos al no usarlos"
+      }
+      //CONSEJOS LUCES LED
+      var aireAcondicionado = document.getElementsByName("grupoLucesLed");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejosLucesLeD").innerHTML = ""
+      }
+      if(aireAcondicionado[1].checked)
+      {
+        document.getElementById("consejosLucesLeD").innerHTML = "Intenta completar todas las luces led que te faltan"
+      }
+      if(aireAcondicionado[2].checked)
+      {
+        document.getElementById("consejosLucesLeD").innerHTML = "Intenta instalar muchas mas luces led"
+      }
+      if(aireAcondicionado[3].checked)
+      {
+        document.getElementById("consejosLucesLeD").innerHTML = "Intenta instalar muchas mas luces led"
+      }
+      if(aireAcondicionado[2].checked)
+      {
+        document.getElementById("consejosLucesLeD").innerHTML = "Considera instalar la mayor cantidad de luces led posibles"
+      }
+      //electrodomesticos consejos utilizacion
+      var aireAcondicionado = document.getElementsByName("grupoElectrodomesticosUtilizados");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejosUtilizacion").innerHTML = "Se recomienda usar electrodomesticos por las noches"
+      }
+      if(aireAcondicionado[1].checked)
+      {
+        document.getElementById("consejosUtilizacion").innerHTML = "Se recomienda reducir el uso de sus electrodomesticos"
+      }
+      if(aireAcondicionado[2].checked)
+      {
+        document.getElementById("consejosUtilizacion").innerHTML = "Se recomienda reducir mucho mas el tiempo de utilizacion de sus electrodomesticos"
+      }
+      //CONSEJOS USO ELECTROMECANICA
+      var aireAcondicionado = document.getElementsByName("grupoElectronicaEncendida");
+      if(aireAcondicionado[0].checked)
+      {
+        document.getElementById("consejosTiempoUtilizacion").innerHTML = ""
+      }
+      if(aireAcondicionado[1].checked)
+      {
+        document.getElementById("consejosTiempoUtilizacion").innerHTML = "Se recomienda apagarlos por las noches"
+      }
+    }

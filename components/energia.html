@@ -24,7 +24,7 @@
     <a href="./residuos.html" class="waves-effect waves-light green btn-large" id="estados" >Residuos</a>
     <a href="./consumo.html" class="waves-effect waves-light purple btn-large" id="estados" >Consumo</a>
 
-    <form id="regForm" action="#">
+    <form id="regForm" name="energia" action="#">
       <h5 id="tipo" style="color: red;">ENERGIA</h5>
       <h3 id="subhead">HOGAR</h3>
       <!-- One "tab" for each step in the form: -->
@@ -56,13 +56,13 @@
         <br>
       </div>
       <!--id 5-->
-      <div class="tab" id="pregunta">Consumo de electricidad (KWh/mes)
-        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+      <div class="tab" id="pregunta" onkeyup="calcularEnergia()">Consumo de electricidad (KWh/mes)
+        <p><input type="number" name="consumoElectricidad" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
             style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
       <!--id 6-->
       <div class="tab" id="pregunta">% de energía limpia utilizada
-        <p><input type="number" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
+        <p><input type="number" name="electricidadLimpia" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
             style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
       <!--id 7-->
@@ -71,31 +71,31 @@
           <div class="col s6">
             <p>
               <label>
-                <input type="checkbox" />
-                <span style="font-size: 30px;">Carbon</span>
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
+                <span style="font-size: 30px;" >Carbon</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Turba</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Gas natural</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Gasoleo de calefaccion</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Madera</span>
               </label>
             </p>
@@ -103,24 +103,24 @@
           <div class="col s6">
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Aceite Vegetal</span>
               </label>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Carbon vegetal</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Electricidad</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="tipoCalefacion" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">Sin calefaccion</span>
               </label>
             </p>
@@ -175,17 +175,17 @@
                 <span style="font-size: 30px;">G</span>
               </label>
             </p>
-            <p>
+            <!--<p>
               <label>
                 <input type="checkbox" />
                 <span style="font-size: 30px;">No lo se,calcularlo de forma manual</span>
               </label>
-            </p>
+            </p>-->
           </div>
         </div>
       </div>
       <!--id 9-->
-      <div class="tab" id="pregunta">- Compañía eléctrica contratada
+      <div class="tab" id="pregunta">Compañía eléctrica contratada
         <p><input type="text" placeholder="Escriba aqui tu respuesta" oninput="this.className = ''" name="fname"
             style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
@@ -198,66 +198,65 @@
       <div class="tab" id="pregunta">¿Que tipo de Aire Acondicionado tienes?
         <p>
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="grupoAire" type="radio"  onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CENTRALIZADO POR CONDUCTOS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> SPLITS EN CADA HABITACIÓN</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO TENGO AIRE
               ACONDICIONADO</span>
           </label>
         </p>
-        <p>
+        <!--<p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoAire" type="radio" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
           </label>
-        </p>
-
+        </p>-->
       </div>
       <!--id 12-->
       <div class="tab" id="pregunta">Temperatura de casa en verano cunado se utiliza en AC
         <p>
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">18ºC O MENOS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> 20ºC</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">22ºC</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">24ºC</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">26ºC</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoTemperaturaAire" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">28ºC O MÁS</span>
           </label>
         </p>
@@ -266,37 +265,37 @@
       <div class="tab" id="pregunta">¿Qué electrodomésticos tienes en tu vivienda?
         <p>
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="group1" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVAVAJILLAS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SECADORA</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">LAVADORA</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">FRIGORIFICO</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">CONGELADOR</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">OTRO</span>
           </label>
         </p>
@@ -307,31 +306,31 @@
           <div class="col s6">
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox"  onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">TV</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">PC</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">CONSOLA</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">IMPRESORA</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">CALEFACTOR</span>
               </label>
             </p>
@@ -339,13 +338,13 @@
           <div class="col s6">
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">SISTEMA DE MUSICA</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox" />
+                <input name="consejosAparatos" type="checkbox" onclick="calcularEnergia()"/>
                 <span style="font-size: 30px;">OTRO</span>
               </label>
             </p>
@@ -356,31 +355,31 @@
       <div class="tab" id="pregunta">Cantidad de LEDs en tu vivienda
         <p>
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="grupoLucesLed" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> TODAS LAS LUCES</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoLucesLed" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> CASI TODAS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoLucesLed" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">BASTANTES</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoLucesLed" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">ALGUNAS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoLucesLed" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NINGUNA</span>
           </label>
         </p>
@@ -389,21 +388,21 @@
       <div class="tab" id="pregunta">¿Sueles utilizar varios electrodomésticos a la vez?
         <p>
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="grupoElectrodomesticosUtilizados" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">POCO, UTILIZO POCO LOS
               ELECTRODOMÉSTICOS Y LOS INTENTO ENCENDER A DIFERENTES HORAS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoElectrodomesticosUtilizados" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> MEDIO, UTILIZO DE MODO NORMAL
               LOS ELECTRODOMÉSTICOS, NO TENGO EN CUENTA LAS HORAS</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoElectrodomesticosUtilizados" type="radio" onclick="calcularEnergia()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">MUCHO, UTILIZO DE MODO INTENSIVO
               LOS ELECTRODOMÉSTICOS Y LOS SUELO ENCENDER AL MISMO TIEMPO</span>
           </label>
@@ -413,13 +412,13 @@
       <div class="tab" id="pregunta">Apagas todos los equipos electrónicos y regletas cuando no los usas?
         <p>
           <label>
-            <input name="group1" type="radio" checked />
-            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">-SI, LOS DESENCHUFO</span>
+            <input name="grupoElectronicaEncendida" type="radio" onclick="calcularEnergia()" />
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SI, LOS DESENCHUFO</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group1" type="radio" />
+            <input name="grupoElectronicaEncendida" type="radio" onclick="calcularEnergia()"/>
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">NO, LOS DEJO EN STANDBY</span>
           </label>
         </p>
@@ -581,7 +580,7 @@
         <p>
           <label>
             <input name="group1" type="radio" checked />
-            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;"> SUELO O TECHO RADIANTE</span>
+            <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SUELO O TECHO RADIANTE</span>
           </label>
         </p>
         <p>
@@ -965,10 +964,34 @@
       </div>
       <!--id 30-->
       <div class="tab" id="pregunta">
-        <h2>TOTAL EMISIONES</h2>
-        <h4>Resultado anual : 10.5</h4>
-        <h1>CONSEJOS</h1>
-      </div>
+        <div class="row">
+          <div class="col s12 m5">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <p>RESULTADO ANUAL (kg/CO2)</p>
+                <p id="resultadoElectro">79,5</p>
+              </span>
+            </div>
+          </div>
+          <div id="consejillos" class="col s12 m12 red animate__animated animate__heartBeat">
+            <div class="card-panel teal red">
+              <span class="white-text">
+                <p style="text-align: center;font-size: 45px;">CONSEJOS</p>
+                <p id="consejoAire"></p>
+                <p id="consejoAire2"></p>
+                <p id="consejosAparatos"></p>
+                <p id="ConsejosLucesLed"></p>
+                <p id="consejosUtilizacion"></p>
+                <p id="consejosTiempoUtilizacion"></p>
+                <p id="ConsejosRopa"></p>
+                <p id="ConsejosRopa"></p>
+              </span>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      <!--BOTONES-->
       <div style="overflow:auto;">
         <div style="float:right;">
           <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;"
