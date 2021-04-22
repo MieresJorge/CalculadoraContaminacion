@@ -576,4 +576,4 @@ function calculoresiduos(){
       }
     }
 
-    //nothin to do
+    //nothin to doa
