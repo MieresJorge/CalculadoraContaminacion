@@ -337,13 +337,13 @@ function calculoresiduos(){
         total =emisiones + 0.89;
         document.getElementById("resultadoResiduo").innerHTML = total.toFixed(2);
       }
-
-      /*CONSEJOS PADRE */
-      if(ConsejosRopa[4].checked || ConsejosRopa[3].checked )
+  }
+    /*CONSEJOS PADRE */
+    if(ConsejosRopa[4].checked || ConsejosRopa[3].checked )
       {
         document.getElementById("ConsejosRopa").innerHTML = "Te recomendamos donar la ropa que ya no usas";
+        document.getElementById("consejillos").style = "display:block"
       }
-  }
 }
 
     /* FUNCION PARA CALCULAR CONSUMO */

@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../estilos.css">
 
     <title>Movilidad</title>
@@ -31,7 +32,7 @@
     <input type="text" id="terranova" name="perro" placeholder="AEREO" disabled>
   <!-- One "tab" for each step in the form: -->
   <!--id 1 AÉREOS-->
-  <div class="tab" id="pregunta" onmouseover="cambiar()">Km recorridos
+  <div class="tab" id="pregunta" onmouseover="cambiar()">Km recorridos de forma aerea
     <p><input  onkeyup="calcularmovilidad()" type="number" placeholder="Escribe aqui tu respuesta" oninput="this.className = ''" name="kmrecorridos" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
   
   </div>
@@ -64,7 +65,7 @@
       </div>            
     </div>
     <!--id 1 TERRESTRE-->
-    <div class="tab" id="pregunta" onmouseover="cambiartotal()">Km recorridos
+    <div class="tab" id="pregunta" onmouseover="cambiartotal()">Km recorridos de forma terrestre
         <p><input onmouseover="cambiartotal()" onkeyup="calcularmovilidadterrestre()" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="terrestrerecorrido" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
     <!--id 2 TERRESTRE-->
