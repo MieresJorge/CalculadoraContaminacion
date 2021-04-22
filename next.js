@@ -575,3 +575,5 @@ function calculoresiduos(){
         document.getElementById("consejosTiempoUtilizacion").innerHTML = "Se recomienda apagarlos por las noches"
       }
     }
+
+    //nothin to do
