@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(comidaEcologica[2].checked)
     {
       document.getElementById("consejoComidaEcologica").innerHTML = "Se recomienda comprar mas comida ecologica"
+      document.getElementById("consejillos").style = "display:block"
     }
   }
 
@@ -389,6 +390,8 @@ function calculoresiduos(){
       {
         bolsass = totalBolsas * 0.1183
         document.getElementById("totalBolsaas").innerHTML ="Total emision por Bolsas: " +  bolsass.toFixed(2);
+        document.getElementById("consejitos").style = "display:block"
+        document.getElementById("ConsejoBolsasEcologicas").innerHTML = "Se recomienda usar bolsas de algodon"
       }
       if(tipobolsass[1].checked)
       {
@@ -410,7 +413,8 @@ function calculoresiduos(){
       libross = totalLibros * 1.2;
       document.getElementById("totalLibros").innerHTML ="Total emision por Libros: " + libross.toFixed(2);
       //TOTAL DEL TOTAL 
-     
+      totalDeConsumo = libross + botellas + bolsass + tabaco + ropita
+     document.getElementById("totalTotal").innerHTML ="Emisiones Totales: " + totalDeConsumo.toFixed(2)
     }
   
     //FUNCION PARA CALCULAR CANTIDAD DE ENERGIA
