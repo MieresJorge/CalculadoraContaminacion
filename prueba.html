@@ -12,10 +12,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Agua</title>
+  <title>TESTEO</title>
 </head>
 
 <body>
+  <!-- NADA DE LO QUE ESTA EN ESTE CODIGO DEBE TOMARSE EN SERIO ESTA HECHO PARA ROMPER TODO LO QUE ENCUENTRO Y VER FALLAS Y COMO NO,SOLUCIONARLAS :) -->
 <h1 style="text-align: center;">TESTEO</h1>
   <div class="container">
     <div class="col s12 m12 red animate__animated animate__heartBeat">
@@ -24,10 +25,10 @@
           <p style="text-align: center;font-size: 45px;">CONSEJOS</p>
           <p id="consejoComidaEcologica">SE RECOMIENDA Lorem ipsum dolor sit amet.</p>
           <p id="consejoCompraEcologica">Se recomienda Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          <video id="center" class="responsive-video" controls>
-            <source src="./video/videotest.mp4" type="video/mp4">
-          </video>
+          <div class="wrap-element">
+            <iframe class="wrapped-iframe" src="https://drive.google.com/file/d/1i57ryLa5HMPas9nq_8HADSFhDpK-Qken/preview" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </span>
+      </div>
       </div>
     </div>
   </div>
@@ -41,5 +42,17 @@
     margin-right: auto;
     display: block
 }
-
+      .wrap-element {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+      }
+      .wrapped-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
 </style>
