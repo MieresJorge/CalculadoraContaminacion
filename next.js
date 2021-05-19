@@ -581,3 +581,96 @@ function calculoresiduos(){
     }
 
     //nothin to doas
+
+
+
+    //Nueva Funcion KW_MENSUALES: :D
+
+    function kwMensuales(){
+      formulario = document.forms["kwMensuales"];
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalFebrero = Number(formulario["Febrero"].value);
+      var totalMarzo = Number(formulario["Marzo"].value);
+      /*var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);
+      var totalEnero = Number(formulario["ENERO"].value);*/
+      document.getElementById("resultado").innerHTML = "Se recomienda apagarlos por las noches"
+    }
+
+    function calcularkwhats() {
+      formulario = document.forms["kwmensuales"];
+      var valorEnero = Number(formulario["enero"].value);
+      var valorFebrero = Number(formulario["febrero"].value);
+      var valorMarzo = Number(formulario["marzo"].value);
+      var valorAbril = Number(formulario["abril"].value);
+      var valorMayo = Number(formulario["mayo"].value);
+      var valorJunio = Number(formulario["junio"].value);
+      var valorJulio = Number(formulario["julio"].value);
+      var valorAgosto = Number(formulario["agosto"].value);
+      var valorSeptiembre = Number(formulario["septiembre"].value);
+      var valorOctubre = Number(formulario["octubre"].value);
+      var valorNoviembre = Number(formulario["noviembre"].value);
+      var valorDiciembre = Number(formulario["diciembre"].value);
+      var type = document.getElementsByName("comeback1");
+
+      //calculo de enero
+      var mensualEnero = valorEnero * 0.1
+      var costeEnero = valorEnero * 0.11
+      var diferenciaEnero = costeEnero - mensualEnero
+      //calculo de febrero
+      var mensualFebrero = valorFebrero * 0.096
+      var costeFebrero = valorFebrero * 0.11
+      var diferenciaFebrero = costeFebrero - mensualFebrero
+      //calculo de marzo
+      var mensualMarzo = valorMarzo * 0.087
+      var costeMarzo = valorMarzo * 0.11
+      var diferenciaMarzo = costeMarzo - mensualMarzo
+      //calculo de Abril
+      var mensualAbril = valorAbril * 0.078
+      var costeAbril = valorAbril * 0.11
+      var diferenciaAbril = costeAbril - mensualAbril
+      //calculo de Mayo
+      var mensualMayo = valorMayo * 0.08
+      var costeMayo = valorMayo * 0.11
+      var diferenciaMayo = costeMayo - mensualMayo
+      //calculo de Junio
+      var mensualJunio = valorJunio * 0.089
+      var costeJunio = valorJunio * 0.11
+      var diferenciaJunio = costeJunio - mensualJunio
+      //calculo de Julio
+      var mensualJulio = valorJulio * 0.092
+      var costeJulio = valorJulio * 0.11
+      var diferenciaJulio = costeJulio - mensualJulio
+      //calculo de Agosto
+      var mensualAgosto = valorAgosto * 0.095
+      var costeAgosto = valorAgosto * 0.11
+      var diferenciaAgosto = costeAgosto - mensualAgosto
+      //calculo de Septiembre
+      var mensualSeptiembre = valorSeptiembre * 0.08
+      var costeSeptiembre = valorSeptiembre * 0.11
+      var diferenciaSeptiembre = costeSeptiembre - mensualSeptiembre
+      //calculo de Octubre
+      var mensualOctubre = valorOctubre * 0.089
+      var costeOctubre = valorOctubre * 0.11
+      var diferenciaOctubre = costeOctubre - mensualOctubre
+      //calculo de Noviembre
+      var mensualNoviembre = valorNoviembre * 0.092
+      var costeNoviembre = valorNoviembre * 0.11
+      var diferenciaNoviembre = costeNoviembre - mensualNoviembre
+      //calculo de Diciembre
+      var mensualDiciembre = valorDiciembre * 0.095
+      var costeDiciembre = valorDiciembre * 0.11
+      var diferenciaDiciembre = costeDiciembre - mensualDiciembre
+      
+      var totalAnual = mensualEnero + mensualFebrero + mensualMarzo + mensualAbril + mensualMayo + mensualJunio + mensualJulio + mensualAgosto +mensualSeptiembre+ mensualNoviembre + mensualDiciembre;
+      var totalCosteMensual = costeEnero + costeFebrero + costeMarzo + costeAbril + costeMayo + costeJunio + costeJulio + costeAgosto + costeSeptiembre + costeNoviembre + costeDiciembre;
+      var totalDiferenciaCostos =  totalCosteMensual - totalAnual;         
+      formulario["resultado"].value = "diferencia es: $" + totalDiferenciaCostos.toFixed(2);
+  
+    }

@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../estilos.css">
 
-    <title>Movilidad</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="../estilos.css">
+
+  <title>Movilidad</title>
 </head>
+
 <body>
   <div style="margin-top: 10px;margin-left: 25px">
-    <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo" style="width: 150px;height: 50px;float: right;">
-    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large" id="estados" >Energia</a>
+    <img src="https://cdn.shopify.com/s/files/1/0445/6618/4089/files/poco2h_300x300.png?v=1614080767" id="logo"
+      style="width: 150px;height: 50px;float: right;">
+    <a href="./energia.html" class="waves-effect waves-light pink lighten-1 btn-large" id="estados">Energia</a>
     <a href="./agua.html" class="waves-effect waves-light blue btn-large" id="estados" disabled>Agua</a>
-    <a href="./movilidad.html" class="waves-effect waves-light red lighten-1 lighten-3 btn-large" id="estados">Movilidad</a>
-    <a href="./dieta.html" class="waves-effect waves-light yellow btn-large" id="estados" style="background-color: #ffd600;border-color: #ffd600;">Alimentacion</a>
-    <a href="./residuos.html" class="waves-effect waves-light green btn-large" id="estados" >Residuos</a>
-    <a href="./consumo.html" class="waves-effect waves-light purple btn-large" id="estados" >Consumo</a>
-  
+    <a href="./movilidad.html" class="waves-effect waves-light red lighten-1 lighten-3 btn-large"
+      id="estados">Movilidad</a>
+    <a href="./dieta.html" class="waves-effect waves-light yellow btn-large" id="estados"
+      style="background-color: #ffd600;border-color: #ffd600;">Alimentacion</a>
+    <a href="./residuos.html" class="waves-effect waves-light green btn-large" id="estados">Residuos</a>
+    <a href="./consumo.html" class="waves-effect waves-light purple btn-large" id="estados">Consumo</a>
+    <a href="./kwMensuales.html" class="waves-effect waves-light  orange lighten-1 btn-large"
+      id="estados">KW/MENSUAL</a>
 
-    <form id="regForm" name="movilidad" action="#" >
-    <h5 id="tipo" style="color: red;">Movilidad</h5>
-    <input type="text" id="AEREO" name="perros" placeholder="TERRESTRE" disabled>
-    <input type="text" id="terranova" name="perro" placeholder="AEREO" disabled>
-  <!-- One "tab" for each step in the form: -->
-  <!--id 1 AÉREOS-->
-  <div class="tab" id="pregunta" onmouseover="cambiar()">Km recorridos de forma aerea
-    <p><input  onkeyup="calcularmovilidad()" type="number" placeholder="Escribe aqui tu respuesta" oninput="this.className = ''" name="kmrecorridos" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
-  
-  </div>
-    <!--id 2 AÉREOS-->
-    <div class="tab" id="pregunta" name="nose">Tipo de desplazamiento
+
+    <form id="regForm" name="movilidad" action="#">
+      <h5 id="tipo" style="color: red;">Movilidad</h5>
+      <input type="text" id="AEREO" name="perros" placeholder="TERRESTRE" disabled>
+      <input type="text" id="terranova" name="perro" placeholder="AEREO" disabled>
+      <!-- One "tab" for each step in the form: -->
+      <!--id 1 AÉREOS-->
+      <div class="tab" id="pregunta" onmouseover="cambiar()">Km recorridos de forma aerea
+        <p><input onkeyup="calcularmovilidad()" type="number" placeholder="Escribe aqui tu respuesta"
+            oninput="this.className = ''" name="kmrecorridos" style="font-family: 'Barlow Condensed';font-size: 40px">
+        </p>
+
+      </div>
+      <!--id 2 AÉREOS-->
+      <div class="tab" id="pregunta" name="nose">Tipo de desplazamiento
         <p>
           <label>
-            <input name="comeback1" type="radio" value="ida" onclick="calcularmovilidad()"  />
+            <input name="comeback1" type="radio" value="ida" onclick="calcularmovilidad()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">SOLO IDA</span>
           </label>
         </p>
@@ -48,82 +57,86 @@
             <input name="comeback1" type="radio" value="vuelta" onclick="calcularmovilidad()" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">IDA Y VUELTA</span>
           </label>
-        </p> 
-    </div>
-    <!--id 3 AÉREOS CONSEJOSs-->
-    <div class="tab" id="pregunta">
-      <div class="row">
-        <div class="col s12 m5 animate__animated animate__heartBeat">
-          <div class="card-panel teal">
-            <span class="white-text">
-              <p>RESULTADO ANUAL (kg/CO2) por desplazamiento de avion</p>
-            <p><input type="text" placeholder="Resultado Total" oninput="this.className = ''" name="resultado" style="font-family: 'Barlow Condensed';font-size: 40px;color: white;" disabled></p>
-            </span>
+        </p>
+      </div>
+      <!--id 3 AÉREOS CONSEJOSs-->
+      <div class="tab" id="pregunta">
+        <div class="row">
+          <div class="col s12 m5 animate__animated animate__heartBeat">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <p>RESULTADO ANUAL (kg/CO2) por desplazamiento de avion</p>
+                <p><input type="text" placeholder="Resultado Total" oninput="this.className = ''" name="resultado"
+                    style="font-family: 'Barlow Condensed';font-size: 40px;color: white;" disabled></p>
+              </span>
+            </div>
           </div>
         </div>
-      </div>            
-    </div>
-    <!--id 1 TERRESTRE-->
-    <div class="tab" id="pregunta" onmouseover="cambiartotal()">Km recorridos de forma terrestre
-        <p><input onmouseover="cambiartotal()" onkeyup="calcularmovilidadterrestre()" type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="terrestrerecorrido" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
-    <!--id 2 TERRESTRE-->
-    <div class="tab" id="pregunta">Nº de pasajeros
-        <p><input type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname" style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      <!--id 1 TERRESTRE-->
+      <div class="tab" id="pregunta" onmouseover="cambiartotal()">Km recorridos de forma terrestre
+        <p><input onmouseover="cambiartotal()" onkeyup="calcularmovilidadterrestre()" type="number"
+            placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="terrestrerecorrido"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
       </div>
-    <!--id 3 TERRESTRE-->
-    <div class="tab" id="pregunta">Tipo de transporte
-      <div class="row">
-        <div class="col s6">
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">COCHE DE GASOLINA</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">COCHE DE DIESEL</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">FURGONETA</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">AUTOBUS INTERURBANO</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">TREN ALTA VELOCIDAD Y LARGA DISTANCIA</span>
-            </label>
-          </p>
+      <!--id 2 TERRESTRE-->
+      <div class="tab" id="pregunta">Nº de pasajeros
+        <p><input type="number" placeholder="escribe aqui tu respuesta" oninput="this.className = ''" name="fname"
+            style="font-family: 'Barlow Condensed';font-size: 40px"></p>
+      </div>
+      <!--id 3 TERRESTRE-->
+      <div class="tab" id="pregunta">Tipo de transporte
+        <div class="row">
+          <div class="col s6">
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">COCHE DE GASOLINA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">COCHE DE DIESEL</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">FURGONETA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">AUTOBUS INTERURBANO</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">TREN ALTA VELOCIDAD Y LARGA DISTANCIA</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6">
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">TREN CONVENCIONAL MEDIA DISTANCIA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">COCHE MEDIO (no se conoce el combustible)</span>
+              </label>
+            </p>
+          </div>
         </div>
-        <div class="col s6">
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">TREN CONVENCIONAL MEDIA DISTANCIA</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="comeback2" type="radio" onclick="calcularmovilidadterrestre()"/>
-              <span style="font-size: 30px;">COCHE MEDIO (no se conoce el combustible)</span>
-            </label>
-          </p>
-        </div>
       </div>
-    </div>
-    <!--id 4 TERRESTRE-->
-    <div class="tab" id="pregunta">Tipo de desplazamiento
+      <!--id 4 TERRESTRE-->
+      <div class="tab" id="pregunta">Tipo de desplazamiento
         <p>
           <label>
             <input name="group1" type="radio" checked />
@@ -135,7 +148,7 @@
             <input name="group1" type="radio" />
             <span style="font-size: 30px;font-family: 'Barlow Condensed', sans-serif;">IDA Y VUELTA</span>
           </label>
-        </p> 
+        </p>
       </div>
       <!--id 5 TERRESTRE-->
       <div class="tab" id="pregunta">¿Qué tipo de vehículo utilizas?
@@ -169,81 +182,84 @@
             <p>
               <label>
                 <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()" />
-                <span style="font-size: 30px;" >DIESEL</span>
+                <span style="font-size: 30px;">DIESEL</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()"/>
-                <span style="font-size: 30px;" >GASOLINA</span>
+                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">GASOLINA</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()"/>
-                <span style="font-size: 30px;" >HIBRIDO</span>
+                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">HIBRIDO</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()"/>
-                <span style="font-size: 30px;" >ELECTRICO</span>
+                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">ELECTRICO</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()"/>
-                <span style="font-size: 30px;" >GAS</span>
+                <input name="comeback4" type="radio" onclick="calcularmovilidadterrestre()" />
+                <span style="font-size: 30px;">GAS</span>
               </label>
             </p>
           </div>
         </div>
       </div>
-    <!--id 7-->
-    <!--ID TOTAL-->
-    <div class="tab" id="pregunta">
-      <div class="row">
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              <p>RESULTADO ANUAL (kg/CO2)</p>
-              <p id="resultadoterrestre"></p>
-            </span>
+      <!--id 7-->
+      <!--ID TOTAL-->
+      <div class="tab" id="pregunta">
+        <div class="row">
+          <div class="col s12 m5">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <p>RESULTADO ANUAL (kg/CO2)</p>
+                <p id="resultadoterrestre"></p>
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="col s12 m12 red animate__animated animate__heartBeat">
-          <div class="card-panel teal red">
-            <span class="white-text">
-              <p style="text-align: center;font-size: 45px;">CONSEJOS</p>
-              <p id="consejostransporte"></p>
-              <p id="consejosTipoTransporte"></p>
-            </span>
+          <div class="col s12 m12 red animate__animated animate__heartBeat">
+            <div class="card-panel teal red">
+              <span class="white-text">
+                <p style="text-align: center;font-size: 45px;">CONSEJOS</p>
+                <p id="consejostransporte"></p>
+                <p id="consejosTipoTransporte"></p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
-  <!--BOTON-->
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;" class="waves-effect waves-light btn-large" style="margin-top: 20px;" onclick="siguientePrev(1),cambiar()">Continuar</a>
-    </div>
-  </div>
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
 
-  </div>
-</form>
+      <!--BOTON-->
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <a style="font-family: 'Barlow Condensed', sans-serif;    font-size: 20px;"
+            class="waves-effect waves-light btn-large" style="margin-top: 20px;"
+            onclick="siguientePrev(1),cambiar()">Continuar</a>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+
+      </div>
+    </form>
 
 </body>
+
 </html>
 <script src="../next.js"></script>

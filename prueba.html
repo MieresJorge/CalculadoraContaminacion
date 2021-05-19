@@ -56,3 +56,45 @@
         border: 0;
       }
 </style>
+
+<script>
+
+
+function calcularkwhats() {
+      formulario = document.forms["kwmensuales"];
+      var valorEnero = Number(formulario["enero"].value);
+      var valorFebrero = Number(formulario["febrero"].value);
+      var valorMarzo = Number(formulario["marzo"].value);
+      var valorAbril = Number(formulario["abril"].value);
+      var valorMayo = Number(formulario["mayo"].value);
+      var valorJunio = Number(formulario["junio"].value);
+      var valorJulio = Number(formulario["julio"].value);
+      var valorAgosto = Number(formulario["agosto"].value);
+      var valorSeptiembre = Number(formulario["septiembre"].value);
+      var valorOctubre = Number(formulario["octubre"].value);
+      var valorNoviembre = Number(formulario["noviembre"].value);
+      var valorDiciembre = Number(formulario["diciembre"].value);
+      var type = document.getElementsByName("comeback1");
+
+      //calculo de enero
+      var mensualEnero = valorEnero * 0.1
+      var costeEnero = valorEnero * 0.11
+      var diferenciaEnero = costeEnero - mensualEnero
+      //calculo de febrero
+      var mensualFebrero = valorFebrero * 0.1
+      var costeFebrero = valorFebrero * 0.11
+      var diferenciaFebrero = costeFebrero - mensualFebrero
+      //calculo de marzo
+      var mensualMarzo = valorMarzo * 0.1
+      var costeMarzo = valorMarzo * 0.11
+      var diferenciaMarzo = costeMarzo - mensualMarzo
+      //calculo de Abril
+      var mensualMarzo = valorAbril * 0.1
+      var costeAbril = valorAbril * 0.11
+      var diferenciaAbril = costeAbril - mensualMarzo
+      
+
+      formulario["resultado"].value = "diferencia es: $" + diferenciaEnero.toFixed(2);
+  
+    }
+</script>
